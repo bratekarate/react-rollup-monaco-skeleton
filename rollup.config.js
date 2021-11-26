@@ -100,6 +100,7 @@ export default ({ configEnv = "dev", configServe, configTest }) => {
         file: configEnv === Environment.build ? pkg.main : pkg.serve,
         format: "esm",
         sourcemap: true,
+        inlineDynamicImports: true,
       },
       external,
       plugins: [
